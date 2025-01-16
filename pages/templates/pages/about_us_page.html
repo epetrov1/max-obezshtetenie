@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block headers %}
+<meta name="description" content="Правни услуги- нашият опит и практика">
+<meta name="keywords" content="правни услуги, застрахователно право, съдебна защита, пострадали при ПТП, злополука">
+<meta name="author" content="Людмил Петков">
+<title>За нас</title>
+{% endblock headers %}
+{% block body %}
+<!-- Start Page Header -->
+<div class="atf-page-heading atf-size-md" style="background-image: url({% static 'img/bg/2.jpg' %}); background-size:cover; background-position:100% 15%;">
+    <div class="container">
+        <div class="row">
+            <div class="atf-page-heading-in text-center">
+                <h1 class="atf-page-heading-title">{% trans 'About Us' %}</h1>
+                <div class="atf-post-label">
+                    <span><a href="{% url 'home-page' %}">{% trans 'Home' %}</a></span>
+                    <span>{% trans 'About Us' %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end-page-heading -->
+{% include 'pages/about_us.html'%}
+{% include 'pages/practice.html'%}
+{% include 'pages/why_us.html'%}
+{% include 'pages/testimonial.html'%}
+{% endblock body %}

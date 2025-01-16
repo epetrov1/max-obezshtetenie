@@ -1,0 +1,154 @@
+@media only screen and (max-width : 2500px) {
+	.page-wrapper{
+		overflow:hidden;
+	}
+	
+}
+@media only screen and (max-width : 1199px) {
+	#portfolio .atf-portfolio-nav {
+		text-align: left;
+	}
+	.mt-xl-40{
+		margin-top:40px;
+	}
+	.mb-xl-40{
+		margin-bottom:40px;
+	}
+	.atf-blog-meta-area .atf-blog-meta {
+		gap: 10px;
+	}
+}
+@media only screen and (max-width : 991px) {
+	.navbar-area {
+		background: var(--rgb-white);
+	}
+	.site-logo img {
+		max-width: 210px;
+	}
+	.atf-hero-area .atf-hero-content h1 {
+		width: 75%;
+	}
+	
+	.atf-hero-area .atf-hero-content p {
+		width: 55%;
+	}
+	.atf-single-about{
+		margin: 15px 0px;
+	}
+	.atf-single-services{
+		margin: 15px 0px;
+	}
+	.atf-single-team{
+		margin: 15px 0px;
+	}
+	.atf-blog-area.one .atf-single-blog{
+		margin: 15px 0px;
+	}
+	.atf-single-footer{
+		margin: 15px 0px;
+	}
+	.atf-mailchamp-headding h2{
+		font-size:25px;
+		margin-bottom:30px;
+	}
+	.mt-lg-40{
+		margin-top:40px;
+	}
+	.mb-lg-40{
+		margin-bottom:40px;
+	}
+	.atf-main-nav {
+		padding: 0 0;
+	}
+	.atf-pricing-content{
+		margin:12px 0;
+	}
+	.atf-single-contact-info{
+		margin:12px 0;
+	}
+	.atf_single_service {
+		padding: 15px 15px 15px;
+	}
+
+}
+@media only screen and (max-width: 768px) {
+	.atf_single_service {
+		padding: 15px 15px 15px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	
+	.atf-hero-area .atf-hero-content h1 {
+		font-size: 40px;
+		line-height: 1.2;
+	}
+	.atf-hero-area .atf-hero-content p {
+		width:70%;
+	}
+	#portfolio .atf-portfolio-nav .nav li {
+		margin: 5px 6px;
+	}
+	
+
+}
+
+@media only screen and (max-width: 576px) {
+	#portfolio .atf-portfolio-nav .nav li{
+		margin: 6px 6px;
+	}
+	.atf-header-area .atf-themes-btn{
+		margin-bottom:15px;
+	}
+	.atf-bg {
+		background-position: 80% 15%;
+	}
+	.atf-hero-area{
+		position:relative;
+		z-index:1;
+	}
+	.atf-hero-area:before{
+		content:'';
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		position:absolute;
+		background:rgba(0,0,0,0.7);
+		z-index:-1;
+	}
+
+}
+@media only screen and (max-width: 479px) {
+	.atf_testimonial_thumb img {
+		max-width: 100%;
+	}
+	.atf-hero-area .atf-hero-content h1 {
+		width: 100%;
+	}
+	.atf-hero-area .atf-hero-content p {
+		width: 100%;
+	}
+	.px-5.one {
+		padding-right: 1rem !important;
+		padding-left: 1rem !important;
+	}
+	.atf-page-heading {
+		background-position: 70% 10% !important;
+	}
+	.atf-page-heading-title {
+		font-size: 25px;
+	}
+	footer.atf-footer-area .atf-section-padding {
+		padding: 50px 0;
+	}
+	.atf-page-heading:before {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+	
+}
+@media screen and (max-width: 320px) and (min-width: 0px){
+	#portfolio .atf-portfolio-nav .nav li{
+		margin: 6px 6px;
+	}
+
+}

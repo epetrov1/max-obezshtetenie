@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block headers %}
+<meta name="description" content="Правни услуги- нашият опит и практика">
+<meta name="keywords" content="правни услуги, застрахователно право, съдебна защита, пострадали при ПТП, злополука">
+<meta name="author" content="Людмил Петков">
+<title>{{ object.title }}</title>
+{% endblock headers %}
+{% block body %}
+<!-- Start Page Header -->
+<div class="atf-page-heading atf-size-md" style="background-image: url({% static 'img/bg/2.jpg' %}); background-size:cover; background-position:100% 15%;">
+    <div class="container">
+        <div class="row">
+            <div class="atf-page-heading-in text-center">
+                <h1 class="atf-page-heading-title">{{ object.tag | safe }}</h1>
+                <div class="atf-post-label">
+                    <span><a href="index.html">{% trans 'Home' %}</a></span>
+                    <span>{% trans 'Case Details' %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End-page-heading -->
+    
+
+<!-- portfolio details area start -->
+<section class="atf_portfolio__details-area atf-section-padding pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-12">
+                <div class="atf_portfolio__details-thumb mb-4">
+                    <img src="{{ portfolio.thumbnail.url }}" alt="gallery">
+                </div>
+                <div class="atf_portfolio__details-wrapper ">
+                    <div class="atf_portfolio__details-text mb-4">
+                        <h2 class="atf_portfolio__details-title mb-4">{{ object.title | safe }}</h2>
+                        <p>{{ object.content | safe }}</p>
+                    </div>
+                </div>         
+            </div>
+        </div>
+    </div>
+</section>
+<!-- portfolio details area end -->
+<section id="portfolio" class="atf-portfolio-area atf-section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-12">
+                <div class="atf-section-title text-start wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="0.3s">
+                    <h2>Related Case Study</h2>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+        
+        <div class="row atf__porfolio-slider-active slick-arrow-2">
+            {% for related in related_portfolios %}
+            <!-- portfolio-item -->
+            <div class="col-lg-4 col-md-6 col-12 atf-grid all logo wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="0.3s">
+                <div class="atf-single-portfolio">
+                    <img class="atf-portfolio-img" src="{{ related.thumbnail.url }}" alt="portfolio">
+                    <div class="box-content">
+                        <h3 class="title">{{ related.title | safe }}</h3>
+                        <span class="post">{{ related.tag | safe }}</span>
+                    </div>
+                    <ul class="icon">
+                        <li>
+                            <a data-rel="lightcase:myCollection" href="{% static 'img/portfolio/1.jpg' %}">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                        <li><a href="{{ related.get_absolute_url }}"><i class="fa fa-link"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock body %}

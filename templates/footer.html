@@ -1,0 +1,83 @@
+{% load static %}
+{% load i18n %}
+<!-- START FOOTER -->
+<footer class="atf-footer-area">
+    <div class="container">
+        <div class="row atf-section-padding">
+            <div class="col-lg-4 col-md-6 col-12 wow fadeIn" data-wow-duration=".5s" data-wow-delay="0.3s">
+                <div class="atf-single-footer">
+                    <h3><a href="#">
+                        <div class="logo-wrapper">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                            <i class="fa-solid fa-hand-holding"></i>
+                        </div>
+                    </a></h3>
+                    <br>
+                    <p class="pe-lg-3">{% trans 'Aliquam at ligula ultrices nisl consequat phar etra in the auris odio spendisse non est quis dolor egestas dignis sim eu viverra nunc.' %}</p>
+                    
+                </div>
+            </div><!--- END COL -->
+            
+            <div class="col-lg-2 col-md-6 col-6 wow fadeIn" data-wow-duration=".5s" data-wow-delay="0.5s">
+                <div class="atf-single-footer">
+                    <h3 class="title">{% trans 'Quick Links' %}</h3>
+                    <ul class="atf-list-menu">
+                        <li> <a href="{% url 'home-page' %}">{% trans 'Get stared' %}</a></li>
+                        <li> <a href="{% url 'about-us-page' %}">{% trans 'About Us' %}</a></li>
+                        <li> <a href="{% url 'contacts-page' %}">{% trans 'Contact Us' %}</a></li>
+                    </ul>
+                </div>
+            </div><!--- END COL -->
+            
+            <div class="col-lg-2 col-md-6 col-6 wow fadeIn" data-wow-duration=".5s" data-wow-delay="0.7s">
+                <div class="atf-single-footer">
+                    <h3 class="title">{% trans 'Our Attorneys' %}</h3>
+                    <ul class="atf-list-menu">
+                        <li><a href="{% url 'home-page'%}#faq">{% trans 'Our faq' %}</a></li>
+                        <li><a href="{% url 'home-page'%}#service">{% trans 'Our service' %}</a></li>
+                        <li><a href="{% url 'portfolio-page' %}">{% trans 'Casy study' %}</a></li>
+                    </ul>
+                </div>
+            </div><!--- END COL -->
+            
+            <div class="col-lg-4 col-md-6 col-12 ps-lg-5 wow fadeIn" data-wow-duration=".5s" data-wow-delay="0.9s">
+                <div class="atf-single-footer">
+                    <h3 class="title">{% trans 'Get in touch' %}</h3>
+                    <div class="atf-contact-info">
+                        <div class="atf-contact-details">
+                            <span class="icon"><i class="fa fa-phone"></i></span>
+                            <p>{% trans '+13577 3321 4442' %}</p>
+                        </div>
+                
+                        <div class="atf-contact-details">
+                            <span class="icon"><i class="fa fa-envelope"></i></span>
+                            <p>{% trans 'demo@example.com' %}</p>
+                        </div>
+                        <div class="atf-contact-details">
+                            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <p>{% trans 'Grafton Street, Dublin' %} </p>
+                        </div>
+                    </div><!--- END CONTACT -->
+                    <h3 class="mt-3 text-white">{% trans 'Office hour' %}</h3>
+                    <div class="atf-office-time mt-3">
+                        <span>{% trans 'Monday-Friday' %}</span>
+                        <p>{% trans '9:00am-5.00pm' %}</p>
+                    </div>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+    
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="atf-footer-bottom text-center">
+                    <p class="creadits">
+                        &copy; 2024
+                        Created by: <a href="https://web-guru-solutions.com" target="_blank">Web Guru Solutions</a>
+                    </p>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div>
+    </div><!--- END CONTAINER -->
+    <!-- FOOTER SECTION END-->	
+</footer>
+<!--- END FOOTER -->

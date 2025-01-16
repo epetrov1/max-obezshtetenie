@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block headers %}
+        {% endblock headers %}
+        <link rel="shortcut icon" href={% static '/img/favicon.png' %} type="image/x-icon">
+        <!-- Latest Bootstrap min CSS -->
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" type="text/css" />
+        <!-- Google Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com">
+		<link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">	
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="{% static 'fonts/font-awesome.css' %}" type="text/css" />
+        <!--magnific-popup Css-->
+        <link rel="stylesheet" href="{% static 'css/lightcase.css' %}" type="text/css" />
+        <!--animate Css-->
+        <link rel="stylesheet" href="{% static 'css/slick.css' %}" type="text/css" />
+        <!--animate Css-->
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css" />
+        <!--swiper Css-->
+        <link rel="stylesheet" href="{% static 'swiper/css/swiper.min.css' %}" type="text/css" />
+        <!--meanmenu Css-->
+        <link rel="stylesheet" href="{% static 'css/meanmenu.css' %}" type="text/css" />
+        <!--odometer.min Css-->
+        <link rel="stylesheet" href="{% static 'css/odometer.min.css' %}" type="text/css" />
+        <!--- owl carousel Css-->
+        <link rel="stylesheet" href="{% static 'owlcarousel/css/owl.carousel.min.css' %}" type="text/css" />
+        <!-- Style CSS -->
+        <link rel="preload" href="{% static 'css/style.css' %}" as="style" />
+        <!-- Responsive CSS -->
+        <link rel="preload" href="{% static 'css/responsive.css' %}" as="style" />
+        
+
+        <!-- main css file -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+        
+    </head>
+    <body class="home-2">
+        <!-- Page Wrapper -->
+		<div class="page-wrapper">
+		
+        {% comment %} <!-- START PRELOADER -->
+        <div id="atf-loader">
+            <div id="atf-loading">
+                <div id="atf-loading-center">
+                    <img src="{% static 'img/law.gif' %}" class="img-fluid" alt="law">
+                </div>
+            </div>
+        </div> {% endcomment %}
+        <!-- END PRELOADER -->
+        <!-- Back to Top Start -->
+        <div class="back-to-top">
+            <i class="fas fa-long-arrow-alt-up"></i>
+        </div>
+        <!-- Back to Top End -->
+        {% include "nav.html" %}
+        {% block body %}{% endblock body %}
+        {% include "footer.html" %}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+
+        <!-- modernizer JS -->		
+        <script src="{% static 'js/modernizr.custom.js' %}" defer></script>
+        <!-- Latest compiled and minified Bootstrap -->
+        <script src="{% static 'bootstrap/js/bootstrap.js' %}" defer></script>
+        <!-- jquery.appear js -->
+        <script src="{% static 'js/jquery.appear.min.js' %}" defer></script>
+        <!-- lightcase js -->	
+        <script src="{% static 'js/slick.js' %}" defer></script>
+        <!-- swiper js -->
+        <script src="{% static 'swiper/js/swiper.min.js' %}" defer></script>
+        <!-- lightcase js -->	
+        <script src="{% static 'js/lightcase.js' %}" defer></script>
+        <!-- odometer js -->
+        <script src="{% static 'js/odometer.min.js' %}" defer></script>
+        <!-- wow js -->
+        <script src="{% static 'js/wow.min.js' %}" defer></script>
+        <!-- isotope.pkgd JS -->
+        <script src="{% static 'js/isotope.pkgd.min.js' %}" defer></script>
+        <!-- owl-carousel min js  -->
+        <script src="{% static 'owlcarousel/js/owl.carousel.min.js' %}" defer></script>
+        <!-- meanmenu js -->
+        <script src="{% static 'js/jquery.meanmenu.js' %}" defer></script>
+        <!-- form-contact js -->
+        <script src="{% static 'js/form-contact.js' %}" defer></script>
+        <!-- ajaxchimp js -->
+        <script src="{% static 'js/ajaxchimp.min.js' %}" defer></script>
+        <!-- main js -->
+        <script src="{% static 'js/main.js' %}" defer></script>
+    </body>
+</html>

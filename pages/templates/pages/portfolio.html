@@ -1,0 +1,50 @@
+{% load static %}
+{% load i18n %}
+<section id="portfolio" class="atf-portfolio-area atf-section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-4 col-12">
+                <div class="atf-section-title text-start wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="0.3s">
+                    <h4 class="sub-title">{% trans 'Our Gallery' %}</h4>
+                    <h2>{% trans 'Recent Case Study' %}</h2>
+                </div>
+            </div>
+            <div class="col-xl-8 col-12">
+                <div class="atf-section-title border-left ps-5 wow fadeInRight" data-wow-duration=".5s" data-wow-delay="0.3s">
+                    <div class="atf-portfolio-nav">
+                        <ul class="nav" id="atf-portfolio-flters">
+                            <li class="filter filter-active" data-filter=".all">{% trans 'All Case' %}</li>
+                            {% for tag in tags %}
+                                <li class="filter" data-filter=".{{ tag }}">{{ tag }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div><!--- END NAV -->
+                </div>
+            </div><!--- END COL -->
+            
+        </div>
+        
+        <div class="row atf-main-portfolio">
+            {% for portfolio in object_list %}
+                <!-- portfolio-item -->
+                <div class="col-lg-4 col-md-6 col-12 atf-grid all {{ portfolio.tag| safe }} wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="0.3s">
+                    <div class="atf-single-portfolio">
+                        <img class="atf-portfolio-img" src="{{ portfolio.thumbnail.url }}" loading="lazy" alt="portfolio">
+                        <div class="box-content">
+                            <h3 class="title">{{ portfolio.title | safe }}</h3>
+                            <span class="post">{{ portfolio.tag | safe }}</span>
+                        </div>
+                        <ul class="icon">
+                            <li>
+                                <a data-rel="lightcase:myCollection" href="{{ portfolio.thumbnail.url }}">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </li>
+                            <li><a href="{{ portfolio.get_absolute_url }}"><i class="fa fa-link"></i></a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+            {% endfor %}
+        </div>        
+    </div>
+</section>

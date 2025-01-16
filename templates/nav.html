@@ -1,0 +1,81 @@
+{% load static %}
+{% load i18n %}
+<!-- Start Navbar Area -->
+<div class="navbar-area">
+    <div class="atf-top-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <div class="atf-top-header-in">
+                        <ul class="atf-top-header-list">
+                            <li> <a href="mailto:office@max-obeshtetenie.com"><i class="fas fa-envelope"></i>office@max-obeshtetenie.com</a></li>
+                            <li><a href="tel:555-888-2222"><i class="fas fa-phone-volume"></i>+359 00000000 </a></li>
+                            <li><a href="#"><i class="fas fa-map-marker-alt"></i>България- Варна</a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </div>
+    <!--- END TOP HEADER -->
+    
+    
+    <div class="atf-main-nav">
+        <div class="container">
+            <div class="row atf-nav-align">
+                <div class="col-lg-3 col-md-3 col-5">
+                    <a class="site-logo" href="{% url 'home-page' %}">
+                        <div class="logo-wrapper">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                            <i class="fa-solid fa-hand-holding"></i>
+                        </div>
+                    </a>
+                </div><!--- END COL -->
+                
+                <div class="col-lg-7 col-md-9 col-7">
+                    <nav class="navbar navbar-expand-md navbar-light atf-navbar-lg-menu">
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"> 
+                                    <a href="{% url 'home-page' %}" class="nav-link">{% trans 'Home' %}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{%url 'about-us-page' %}" class="nav-link">{% trans 'About' %}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'portfolio-page' %}" class="nav-link">{% trans 'Case Study' %}</i></a>
+                                </li>
+                                
+                                {% comment %} <li class="nav-item">
+                                    <a href="blog.html" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="blog-grid.html" class="nav-link">Blog Grid</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="blog-list.html" class="nav-link">Blog List</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="blog-details.html" class="nav-link">Blog Details</a>
+                                        </li>
+                                    </ul>
+                                </li> {% endcomment %}
+                                <li class="nav-item">
+                                    <a href="{% url 'contacts-page' %}" class="nav-link">{% trans 'Contact' %}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="mobile-menu"></div>
+                </div><!--- END COL -->
+                    
+                <div class="col-lg-2">
+                    <div class="atf-menu-btn atf-main-btn d-none d-lg-block text-end"> 
+                        <a href="{% url 'contacts-page' %}" class="atf-themes-btn mt-2">{% trans 'Free consultent' %}</a>
+                    </div>
+                </div><!--- END COL -->
+            </div><!--- END ROW -->
+        </div><!--- END CONTAINER -->
+    </div>
+</div>
+<!-- End Navbar Area -->

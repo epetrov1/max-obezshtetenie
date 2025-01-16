@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block headers %}
+<meta name="description" content="Реални правни казуси по които сме работили">
+<meta name="keywords" content="правни услуги, застрахователно право, съдебна защита, пострадали при ПТП, злополука">
+<meta name="author" content="Людмил Петков">
+<title>Реални казуси</title>
+{% endblock headers %}
+{% block body %}
+<!-- Start Page Header -->
+<div class="atf-page-heading atf-size-md" style="background-image: url({% static 'img/bg/2.jpg' %}); background-size:cover; background-position:100% 15%;">
+    <div class="container">
+        <div class="row">
+            <div class="atf-page-heading-in text-center">
+                <h1 class="atf-page-heading-title">{% trans 'Case Study' %}</h1>
+                <div class="atf-post-label">
+                    <span><a href="{% url 'home-page' %}">{% trans 'Home' %}</a></span>
+                    <span>{% trans 'Case Study' %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End-page-heading -->
+{% include 'pages/portfolio.html'%}
+{% include 'pages/contacts.html'%}
+{% include 'pages/testimonial.html'%}
+
+{% endblock body %}

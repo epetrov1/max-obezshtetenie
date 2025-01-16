@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block headers %}
+<meta name="description" content="Свържете се с нас за консултации">
+<meta name="keywords" content="правни услуги, адвокатска кантора, телефон адвокат, свържи се с адвокат">
+<meta name="author" content="Людмил Петков">
+<title>Контакти</title>
+{% endblock headers %}
+{% block body %}
+<!-- Start Page Header -->
+<div class="atf-page-heading atf-size-md" style="background-image: url({% static 'img/bg/2.jpg' %}); background-size:cover; background-position:100% 15%;">
+    <div class="container">
+        <div class="row">
+            <div class="atf-page-heading-in text-center">
+                <h1 class="atf-page-heading-title">{% trans 'Contact Us' %}</h1>
+                <div class="atf-post-label">
+                    <span><a href="{% url 'home-page' %}">{% trans 'Home' %}</a></span>
+                    <span>{% trans 'Contact' %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end-page-heading -->
+
+<!-- Start Contact Info -->
+<section class="atf_contact_info atf-section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-12">
+                <div class="atf-section-title text-start wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="0.3s">
+                    <h4 class="sub-title">{% trans 'Our Contact' %}</h4>
+                    <h2>{% trans 'Your Booking Address' %}</h2>
+                </div>
+            </div><!--- END COL -->
+            
+            <div class="col-lg-6 col-12">
+                <div class="atf-section-title border-left ps-5 wow fadeInRight" data-wow-duration=".5s" data-wow-delay="0.3s">
+                    <p>{% trans 'Pellentesque vitae dictum lectus, nec consectetur metus. Ut facilisis fermen tum turpis, nec malesuada mauris finibus quis. Curabitur tincidunt nisi bib endum augue maximus, vitae malesuada nunc.' %}</p>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="0.3s">
+                <div class="atf-single-contact-info"> 
+                    <div class="icon">
+                        <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                    </div>
+                    <div class="single-contact-content">
+                        <h3>{% trans 'Our Office Address' %}</h3>
+                        <span>{% trans 'Grafton Street, Dublin City' %} </span> 
+                    </div>
+                </div>
+            </div><!--- END COL -->
+            
+            <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration=".5s" data-wow-delay="0.3s">
+                <div class="atf-single-contact-info"> 
+                    <div class="icon">
+                        <span class="icon"><i class="fa fa-phone"></i></span>
+                    </div>
+                    <div class="single-contact-content">
+                        <h3>{% trans 'Our Mobile Number' %}</h3>
+                        <span>{% trans '+8412 2951 238' %} </span> 
+                    </div>
+                </div>
+            </div><!--- END COL -->
+            <div class="col-lg-4 col-md-6 col-12 wow fadeInRight" data-wow-duration=".5s" data-wow-delay="0.3s">
+                <div class="atf-single-contact-info"> 
+                    <div class="icon">
+                        <span class="icon"><i class="fa fa-envelope"></i></span>
+                    </div>
+                    <div class="single-contact-content">
+                        <h3>{% trans 'Our Mail address' %}</h3>
+                        <span>{% trans 'info@example.com' %} </span> 
+                    </div>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+    </div>
+</section>
+<!-- End Contact Info -->
+{% include 'pages/contacts.html'%}
+<!-- Google Map start-->
+<div id="atf-map-area" class="atf-section-padding">
+    <div class="contanier">
+        <div class="row">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28034.237790658906!2d77.20592421549983!3d28.56136188836395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3ac3e67dccb%3A0xeb7e5db0e66ebbb0!2sUnited%20Law%20Office!5e0!3m2!1sen!2sbd!4v1717949295535!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+<!-- Google Map end -->
+{% endblock body %}

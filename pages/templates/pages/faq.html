@@ -1,0 +1,82 @@
+{% load static %}
+{% load i18n %}
+<!-- START FREQUENTLY AREA -->
+<section id="faq" class="atf-faq-area atf-section-padding position-relative">
+    <div class="atf__overlay_1"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-12  wow fadeInLeft" data-wow-duration=".5s" data-wow-delay="0.3s">
+                <div class="row justify-content-start">
+                    <div class="col-lg-12 col-12 text-start">
+                        <div class="atf-section-title mb-0">
+                            <h4 class="sub-title">{% trans 'Answer & question' %}</h4>
+                            <h2>{% trans 'Your Asked Question' %}</h2>
+                            <p>{% trans 'Sodales ante, ac interdum urna. Nunc augue augue, feugiat in vehicula eget, mollis id nulla. Pellentesque malesuada, enim laoreet laoreet facilisis, nulla velit consectetur nunc, et interdum lacus augue id nulla.' %}</p>
+                        </div>
+                    </div><!--- END COL -->
+                </div><!--- END ROW -->
+                
+                <div class="atf-faq-accordion accordion" id="faqAccordion">
+                    <div class="card">
+                        <div class="card-header">
+                            <button type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            {% trans 'Why are use of law?' %}
+                            </button>
+                        </div>
+                        <div id="collapseOne" class="collapse show" data-bs-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>{% trans 'Nunc sit amet consequat ante. Vivamus molestie lacus eu purus eleifend, eu euismod eros varius. Nulla fringilla ultrices faucibus. Suspendisse vestibulum arcu iaculis, mattis tellus sed, tincidunt enim.' %} </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            {% trans 'What is the perfect business methods?' %}
+                            </button>
+                        </div>
+                        <div id="collapseTwo" class="collapse" data-bs-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>{% trans 'Answer 2' %} </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            {% trans 'How Can download this family law?' %}
+                            </button>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-bs-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>{% trans 'Answer 3' %} </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            {% trans 'Do you Know this criminal law?' %}
+                            </button>
+                        </div>
+                        <div id="collapseFour" class="collapse" data-bs-parent="#faqAccordion">
+                            <div class="card-body">
+                                <p>{% trans 'Answer 4' %} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- END PANEL -->
+            </div><!-- END COL -->
+            
+            <div class="col-xl-6 col-12 ps-lg-5 mt-xl-40 wow fadeInRight" data-wow-duration=".5s" data-wow-delay="0.3s">
+                <div class="atf-faq-inner text-center mt-xl-40">
+                    <img src="{% static 'img/about/faq.png' %}" loading="lazy" alt="Faq">
+                </div>
+            </div><!-- End COL -->
+        </div><!-- End ROW -->	
+    </div><!-- End CONTAINER -->	
+</section>	
+<!-- END FREQUENTLY AREA-->

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block headers %}
+<meta name="description" content="Правни услуги, получаване на обезщтетения">
+<meta name="keywords" content="правни услуги, застрахователно право, деликт, договорно право, неоснователно обогатяване">
+<meta name="author" content="Людмил Петков">
+<title>Максимални обезщтетения</title>
+{% endblock headers %}
+{% block body %}
+<!-- START HOME -->
+<section id="home" class="atf-hero-area atf-align-items-details atf-bg" style="background-image: url({% static 'img/bg/1.jpg' %});">
+    <div class="container">
+        <div class="row justify-content-start">
+            <!--LEFT COL-->
+            <div class="col-xl-7 col-lg-6 col-12">
+                <div class="atf-hero-content text-start">
+                    <h4 class="sub-title">{% trans 'Fight Your Justice' %}</h4>
+                    <h1  class="text-white text-capitalize">{% trans 'We resolve the Cases & I will try to justice' %}</h1>
+                    <p class="rgb-white">{% trans 'Etiam molestie ultrices nibh ut venenatis ivamus bibendum quis <br> augue nec placerat. Quisque vitae risus tempor urna.' %}</p>
+                    <!-- Main-btn -->
+                    <div class="atf-main-btn"> 
+                        <a href="{% url 'contacts-page' %}" class="atf-themes-btn text-white">{% trans 'Booking Appoinment' %} </a>
+                    </div>
+                </div>
+            </div><!--- END COL -->
+        </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+</section>
+<!-- END HOME -->
+{% include 'pages/about_us.html'%}
+{% include 'pages/practice.html'%}
+{% include 'pages/portfolio.html'%}
+{% include 'pages/faq.html'%}
+{% include 'pages/why_us.html'%}
+{% include 'pages/testimonial.html'%}
+{% include 'pages/hire.html'%}
+{% endblock body %}
